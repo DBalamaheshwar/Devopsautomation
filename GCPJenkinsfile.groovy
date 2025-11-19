@@ -23,7 +23,9 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                checkout scm
+                git branch: 'main', 
+                    credentialsId: 'Github2', 
+                    url: 'https://github.com/DBalamaheshwar/Devopsautomation.git'
             }
         }
 
