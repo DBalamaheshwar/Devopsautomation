@@ -1,0 +1,10 @@
+image:
+  repository: your_dockerhub/python-webapp
+  tag: "latest"
+
+service:
+  port: 80
+  targetPort: 8000
+
+postgres:
+  password: password
