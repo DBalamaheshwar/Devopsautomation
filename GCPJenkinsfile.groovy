@@ -5,13 +5,8 @@ pipeline {
         IMAGE_NAME = "bala"
         BUILD_TAG = "${IMAGE_NAME}:${BUILD_NUMBER}"
 
-        // JFrog
-        JFROG_DOCKER_REPO = "bala.jfrog.io/artifactory/docker-local"
-        JFROG_XRAY_URL    = "https://bala.jfrog.io/xray"
-
-        // Tenable
-        TEN_REGISTRY = "registry.tenable.io/bala"
-        TEN_API      = "https://cloud.tenable.com"
+        // Docker Hub
+        DOCKERHUB_REPO = "your-dockerhub-username/${IMAGE_NAME}"
 
         // GCP
         PROJECT_ID   = "bala-gcp"
@@ -31,23 +26,29 @@ pipeline {
 
         stage('Docker Build') {
             steps {
-                sh """
+                powershell  """
                     docker build -t ${IMAGE_NAME}:latest .
                 """
             }
         }
 
-        stage('Push to JFrog') {
+        stage('Push to Docker Hub') {
             steps {
                 withCredentials([usernamePassword(
-                    credentialsId: 'jfrog-creds',
-                    usernameVariable: 'JF_USER',
-                    passwordVariable: 'JF_PASS'
+                    credentialsId: 'dockerhub-creds',
+                    usernameVariable: 'DOCKER_USER',
+                    passwordVariable: 'DOCKER_PASS'
                 )]) {
-                    sh """
-                        echo "$JF_PASS" | docker login ${JFROG_DOCKER_REPO} -u "$JF_USER" --password-stdin
-                        docker tag ${IMAGE_NAME}:latest ${JFROG_DOCKER_REPO}/${BUILD_TAG}
-                        docker push ${JFROG_DOCKER_REPO}/${BUILD_TAG}
+                    powershell  """
+
+                        Write-Host '[INFO] Logging into Docker Hub...'
+                        docker login -u $env:DOCKER_USER -p $env:DOCKER_PASS
+
+                        Write-Host '[INFO] Tagging Image...'
+                        docker tag ${IMAGE_NAME}:latest ${DOCKERHUB_REPO}:${BUILD_NUMBER}
+
+                        Write-Host '[INFO] Pushing Image...'
+                        docker push ${DOCKERHUB_REPO}:${BUILD_NUMBER}                        
                     """
                 }
             }
@@ -58,8 +59,9 @@ pipeline {
 
                 stage('Trivy Scan') {
                     steps {
-                        sh """
-                            mkdir -p reports
+                        powershell  """
+                            Write-Host '[INFO] Running Trivy Scan...'
+                            mkdir -p  reports -Force | Out-Null
                             docker run --rm -v /var/run/docker.sock:/var/run/docker.sock \
                                 aquasec/trivy image --format json \
                                 -o reports/trivy-report.json \
@@ -69,60 +71,40 @@ pipeline {
                     }
                 }
 
-                stage('JFrog Xray Scan') {
+                stage('Clair Scan') {
                     steps {
-                        sh """
+                        powershell  """
                             mkdir -p reports
-                            echo "Trigger Xray Scan..."
-
-                            # Create scan request
-                            cat > xray-request.json <<EOF
-                            {
-                              "scan_type": "repository",
-                              "parameters": {
-                                "repo_path": "docker-local/${IMAGE_NAME}"
-                              }
-                            }
-                            EOF
+                            docker run --rm -v /var/run/docker.sock:/var/run/docker.sock \
+                                arminc/clair-scanner:latest \
+                                -r reports/clair-report.json \
+                                -c http://clair:6060 ${IMAGE_NAME}:latest || true
                         """
-
-                        withCredentials([string(credentialsId: 'jfrog-api', variable: 'JF_API')]) {
-                            sh """
-                                curl -H "Content-Type: application/json" \
-                                     -H "X-JFrog-Art-Api: $JF_API" \
-                                     -X POST ${JFROG_XRAY_URL}/api/v1/scan \
-                                     -d @xray-request.json \
-                                     -o xray-scan-response.json || true
-
-                                cp xray-scan-response.json reports/xray-report.json
-                            """
-                        }
-
-                        archiveArtifacts artifacts: 'reports/xray-report.json'
+                        archiveArtifacts artifacts: 'reports/clair-report.json'
                     }
                 }
 
-                stage('Tenable Scan') {
+                stage('Syft + Grype Scan') {
                     steps {
-                        withCredentials([string(credentialsId: 'tenable-api', variable: 'TEN_KEY')]) {
-                            sh """
-                                mkdir -p reports
+                        powershell  """
+                            mkdir -p reports
+                            docker run --rm -v /var/run/docker.sock:/var/run/docker.sock \
+                                anchore/syft:latest ${IMAGE_NAME}:latest -o json > reports/syft-sbom.json || true
 
-                                curl -s -H "X-ApiKeys: accessKey=$TEN_KEY;secretKey=$TEN_KEY" \
-                                     ${TEN_API}/container-security/api/v1/images \
-                                     -o reports/tenable-report.json || true
-                            """
-                        }
-                        archiveArtifacts artifacts: 'reports/tenable-report.json'
+                            docker run --rm -v /var/run/docker.sock:/var/run/docker.sock \
+                                anchore/grype:latest reports/syft-sbom.json -o json > reports/grype-report.json || true
+                        """
+                        archiveArtifacts artifacts: 'reports/grype-report.json'
                     }
                 }
+
             }
         }
 
-        stage('Create GKE Cluster') {
+      /*  stage('Create GKE Cluster') {
             steps {
                 withCredentials([file(credentialsId: 'gcp-sa', variable: 'GOOGLE_APPLICATION_CREDENTIALS')]) {
-                    sh """
+                    powershell  """
                         gcloud auth activate-service-account --key-file=$GOOGLE_APPLICATION_CREDENTIALS
                         gcloud config set project ${PROJECT_ID}
 
@@ -132,11 +114,11 @@ pipeline {
                     """
                 }
             }
-        }
-
+        } */
+ /* 
         stage('Deploy to Kubernetes') {
             steps {
-                sh """
+                powershell  """
                     gcloud container clusters get-credentials ${CLUSTER_NAME} --region ${REGION}
                     kubectl apply -f k8s/
                 """
@@ -145,7 +127,7 @@ pipeline {
 
         stage('Collect Logs & Export') {
             steps {
-                sh """
+                powershell  """
                     mkdir -p logs
                     kubectl get pods -A > logs/pods.log
                     kubectl get deploy -A > logs/deployments.log
@@ -155,15 +137,15 @@ pipeline {
                 """
                 archiveArtifacts artifacts: 'logs.zip'
             }
-        }
+        } */
 
-        stage('Cleanup GKE Cluster') {
+         /* stage('Cleanup GKE Cluster') {
             steps {
-                sh """
+                powershell  """
                     gcloud container clusters delete ${CLUSTER_NAME} \
                         --region ${REGION} --quiet || true
                 """
             }
-        }
+        }*/
     }
 }
