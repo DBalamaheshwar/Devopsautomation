@@ -1,0 +1,18 @@
+# Ignore .env files
+*.env
+
+# Ignore Terraform directories and files
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+
+# Optionally ignore other sensitive or temporary files
+.idea/                # IntelliJ IDEA project files (if using JetBrains)
+*.log                  # Log files
+.DS_Store              # macOS system files
+*.swp                  # vim swap files
+.vscode/               # VSCode settings folder
+tfplan
+tfplan.json
+.terraform.lock.hcl
+

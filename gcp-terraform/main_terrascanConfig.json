@@ -1,0 +1,73 @@
+{
+	"terrascanConfig": {
+		"google_compute_firewall": [
+			{
+				"id": "google_compute_firewall.allow_all",
+				"name": "allow_all",
+				"module_name": "root",
+				"source": "main.tf",
+				"line": 52,
+				"type": "google_compute_firewall",
+				"config": {
+					"allow": [
+						{
+							"ports": [
+								"0-65535"
+							],
+							"protocol": "tcp"
+						}
+					],
+					"name": "allow-all-traffic",
+					"network": "default",
+					"source_ranges": [
+						"0.0.0.0/0"
+					]
+				},
+				"skip_rules": null,
+				"max_severity": "",
+				"min_severity": ""
+			}
+		],
+		"google_logging_project_sink": [
+			{
+				"id": "google_logging_project_sink.project_logs",
+				"name": "project_logs",
+				"module_name": "root",
+				"source": "main.tf",
+				"line": 43,
+				"type": "google_logging_project_sink",
+				"config": {
+					"destination": "storage.googleapis.com/${var.project_name}-logs",
+					"filter": "severity>=ERROR",
+					"name": "project-log-sink",
+					"unique_writer_identity": true
+				},
+				"skip_rules": null,
+				"max_severity": "",
+				"min_severity": ""
+			}
+		],
+		"google_storage_bucket": [
+			{
+				"id": "google_storage_bucket.msy_bucket",
+				"name": "msy_bucket",
+				"module_name": "root",
+				"source": "main.tf",
+				"line": 64,
+				"type": "google_storage_bucket",
+				"config": {
+					"location": "US",
+					"name": "my-unsafe-sbucket"
+				},
+				"skip_rules": null,
+				"max_severity": "",
+				"min_severity": ""
+			}
+		]
+	},
+	"iacMetadata": {
+		"iacType": "terraform",
+		"iacPath": "c:/Users/balamaheshwar.d/Desktop/POC/Devopsautomation/gcp-terraform/main.tf",
+		"providerType": "GCP"
+	}
+}

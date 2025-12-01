@@ -1,0 +1,23 @@
+{
+  "results": {
+    "scan_errors": [
+      {
+        "iac_type": "terraform",
+        "directory": "/root/Desktop/poc/Devopsautomation/gcp-terraform/modules",
+        "errMsg": "directory '/root/Desktop/poc/Devopsautomation/gcp-terraform/modules' has no terraform config files"
+      }
+    ],
+    "violations": null,
+    "skipped_violations": null,
+    "scan_summary": {
+      "file/folder": "/root/Desktop/poc/Devopsautomation/gcp-terraform",
+      "iac_type": "terraform",
+      "scanned_at": "2025-11-29 19:03:58.721921615 +0000 UTC",
+      "policies_validated": 0,
+      "violated_policies": 0,
+      "low": 0,
+      "medium": 0,
+      "high": 0
+    }
+  }
+}

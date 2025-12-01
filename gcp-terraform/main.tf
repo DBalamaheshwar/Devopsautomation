@@ -47,3 +47,25 @@ resource "google_logging_project_sink" "project_logs" {
 
   unique_writer_identity = true
 }
+
+# Example of insecure setting (will trigger high severity issues)
+resource "google_compute_firewall" "allow_all" {
+  name    = "allow-all-traffic"
+  network = "default"
+
+  allow {
+    protocol = "tcp"
+    ports    = ["0-65535"]
+  }
+
+  source_ranges = ["0.0.0.0/0"]  # This exposes the firewall to the entire internet (high severity)
+}
+
+resource "google_storage_bucket" "msy_bucket" {
+  name     = "my-unsafe-sbucket"
+  location = "US"
+}  # Missing encryption (medium severity)
+
+
+
+

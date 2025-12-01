@@ -1,0 +1,100 @@
+{
+	"terrascanConfig": {
+		"google_storage_bucket": [
+			{
+				"id": "google_storage_bucket.bucket",
+				"name": "bucket",
+				"module_name": "root",
+				"source": "main.tf",
+				"line": 1,
+				"type": "google_storage_bucket",
+				"config": {
+					"labels": "${var.labels}",
+					"lifecycle_rule": [
+						{
+							"action": [
+								{
+									"type": "Delete"
+								}
+							],
+							"condition": [
+								{
+									"age": 30
+								}
+							]
+						}
+					],
+					"location": "US",
+					"logging": [
+						{
+							"log_bucket": "${google_storage_bucket.log_bucket.name}",
+							"log_object_prefix": "access_logs"
+						}
+					],
+					"name": "${var.bucket_name}",
+					"uniform_bucket_level_access": true,
+					"versioning": [
+						{
+							"enabled": true
+						}
+					]
+				},
+				"skip_rules": null,
+				"max_severity": "",
+				"min_severity": ""
+			},
+			{
+				"id": "google_storage_bucket.log_bucket",
+				"name": "log_bucket",
+				"module_name": "root",
+				"source": "main.tf",
+				"line": 27,
+				"type": "google_storage_bucket",
+				"config": {
+					"force_destroy": true,
+					"labels": "${var.labels}",
+					"location": "US",
+					"name": "${var.bucket_name}-logs"
+				},
+				"skip_rules": null,
+				"max_severity": "",
+				"min_severity": ""
+			},
+			{
+				"id": "google_storage_bucket.bucket2",
+				"name": "bucket2",
+				"module_name": "root",
+				"source": "main.tf",
+				"line": 35,
+				"type": "google_storage_bucket",
+				"config": {
+					"location": "US",
+					"name": "my-bucket-1"
+				},
+				"skip_rules": null,
+				"max_severity": "",
+				"min_severity": ""
+			},
+			{
+				"id": "google_storage_bucket.bucket3",
+				"name": "bucket3",
+				"module_name": "root",
+				"source": "main.tf",
+				"line": 40,
+				"type": "google_storage_bucket",
+				"config": {
+					"location": "EU",
+					"name": "my-bucket-2"
+				},
+				"skip_rules": null,
+				"max_severity": "",
+				"min_severity": ""
+			}
+		]
+	},
+	"iacMetadata": {
+		"iacType": "terraform",
+		"iacPath": "c:/Users/balamaheshwar.d/Desktop/POC/Devopsautomation/gcp-terraform/modules/storage/main.tf",
+		"providerType": "GCP"
+	}
+}

@@ -3,10 +3,14 @@ resource "google_service_account" "vm_sa" {
   display_name = "VM Service Account"
 }
 
+
+
 resource "google_project_iam_member" "sa_storage_admin" {
-  role   = "roles/storage.admin"
-  member = "serviceAccount:${google_service_account.vm_sa.email}"
+  project = var.project_id  # This is where the project ID is used
+  role    = "roles/storage.admin"
+  member  = "serviceAccount:${google_service_account.vm_sa.email}"
 }
+
 
 resource "google_compute_instance" "vm" {
   name         = "terraform-gcp-vm"
@@ -25,7 +29,17 @@ resource "google_compute_instance" "vm" {
     access_config {}
   }
 
-  metadata_startup_script = var.startup_script
+  metadata = {
+    startup-script = <<EOF
+#! /bin/bash
+
+# Install google logging agent
+curl -sSO https://dl.google.com/cloudagents/add-google-cloud-ops-agent-repo.sh
+sudo bash add-google-cloud-ops-agent-repo.sh --also-install
+
+echo "Startup script executed at: $(date)" >> /var/log/startup.log
+EOF
+  }
 
   service_account {
     email  = google_service_account.vm_sa.email
@@ -35,13 +49,3 @@ resource "google_compute_instance" "vm" {
   labels = var.labels
 }
 
-
-metadata_startup_script = <<EOF
-#! /bin/bash
-
-# Install google logging agent
-curl -sSO https://dl.google.com/cloudagents/add-google-cloud-ops-agent-repo.sh
-sudo bash add-google-cloud-ops-agent-repo.sh --also-install
-
-echo "Startup script executed at: $(date)" >> /var/log/startup.log
-EOF

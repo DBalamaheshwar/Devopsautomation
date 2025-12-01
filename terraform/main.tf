@@ -1,7 +1,3 @@
-provider "aws" {
-  region = var.region
-}
-
 # Auto-generated tags
 locals {
   common_tags = {

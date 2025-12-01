@@ -1,0 +1,1000 @@
+ 1026  xcfe4-panel
+ 1027  xfce4-panel
+ 1028  pulse  audio
+ 1029  pulse-audio
+ 1030  alsactl init
+ 1031  sudo addgroup  pulse audio
+ 1032  sudo addgroup  pulseaudio
+ 1033  sudo service  pulseaudio restart 
+ 1034  clear
+ 1035  airodump-ng wlan0mon
+ 1036  pavucontrol
+ 1037  pavucontrol restart
+ 1038  pavucontrol  stop
+ 1039  pavucontrol  start
+ 1040  pulseaudio --check
+ 1041  pulseaudio -D
+ 1042  iwconfig
+ 1043  ifconfig
+ 1044  iwconfig
+ 1045  ifconfig
+ 1046  nm-applet
+ 1047  history >last.txt
+ 1048  gedit last.txt 
+ 1049  sudo ifconfig wlan0 up
+ 1050  sudo apt-get autoremove
+ 1051  airmon-ng start wlan0
+ 1052  airodump-ng wlan0mon
+ 1053  nmcli dev wifi
+ 1054  ping 8.8.8.8
+ 1055  service network-manager restart 
+ 1056  sudo systemctl restart networking 
+ 1057  sudo systemctl restart NetworkManager
+ 1058  ping 8.8.8.8
+ 1059  aptitude install bluetooth
+ 1060  sudo systemctl enable bluetooth
+ 1061  sudo systemctl start bluetooth
+ 1062  sudo apt install blueman
+ 1063  pactl unload-module module-bluetooth-discover
+ 1064  pactl load-module module-bluetooth-discover
+ 1065  apt install libspa-0.2-bluetooth && apt purge pulseaudio-module-bluetooth
+ 1066  apt -a show bluetooth
+ 1067  sudo systemctl start bluetooth
+ 1068  reboot
+ 1069  df -h 
+ 1070  clear
+ 1071  sudo thunar
+ 1072  disk
+ 1073  disks
+ 1074  gnome-disks
+ 1075  udisksctl status
+ 1076  sudo systemctl status gnome
+ 1077  sudo systemctl status gnome-disks
+ 1078  sudo apt-get install gnome-disk-utility
+ 1079  gnome-disks
+ 1080  code .
+ 1081  sudo code .
+ 1082  exit
+ 1083  sudo add-apt-repository ppa:obsproject/obs-studio
+ 1084  pip install siterank
+ 1085  siterank beea.in
+ 1086  siterank google.com
+ 1087  pwd
+ 1088  /VIRUS/mi july 2019/IMG_20190514_163137.jpg
+ 1089  find /home/user/videos -type f | grep -E '\.mp4$'
+ 1090  find /VIRUS/0personals/ -type f | grep -E '\.mp4$'
+ 1091  find /VIRUS/0personals/ -type f | grep -E '\.mp4$' > videolist.txt
+ 1092  find /VIRUS/0personals/ -type f -name "*.mp4" -newermt 2018-01-01 ! -newermt 2021-01-01 >201.txt
+ 1093  #[200~find /VIRUS/0personals/ -type f -name "*.mp4" | awk -F/ '{print $NF, $0}' | sort | uniq -D -w 40~
+ 1094  find /VIRUS/0personals/ -type f -name "*.mp4" | awk -F/ '{print $NF, $0}' | sort | uniq -D -w 40 >duplucate.txt
+ 1095  sudo apt-get install ./google-chrome-stable_current_amd64.deb
+ 1096  sudo apt-get update
+ 1097  clear 
+ 1098  ftp://10.122.61.132:9000
+ 1099  ftps://10.122.61.132:9000
+ 1100  ls -Art | tail -n 1
+ 1101  gedit  ~/.config/gtk-3.0/bookmarks
+ 1102  gedit  .local/share/recently-used.xbel
+ 1103  gedit  ~/.config/gtk-3.0/bookmarks
+ 1104  gedit  ~/.config/xfce4/helpers.rc
+ 1105  sudo apt-get install ./google-chrome-stable_current_amd64.deb
+ 1106  sudo systemctl enable --now vsftpd
+ 1107  sudo apt install vsftpd
+ 1108  sudo systemctl status vsftpd
+ 1109  sudo systemctl enable --now vsftpd
+ 1110  ftp://192.168.0.141:2221
+ 1111  gedit /etc/vsftpd.conf 
+ 1112  shutdown +2
+ 1113  cd Downloads/5nov/
+ 1114  sudo apt-get install ./google-chrome-stable_current_amd64.deb
+ 1115  df -h 
+ 1116  cd  /media/root/9016-4EF8
+ 1117  ls -ltr
+ 1118  cd log/
+ 1119  ls
+ 1120  rm .8
+ 1121  rm -rf .*
+ 1122  ls
+ 1123  cd ..
+ 1124  rm -rf log/
+ 1125  chmod a+x log/
+ 1126  chmod 777 log/
+ 1127  chmod g+rw log/
+ 1128  chmod g+rw current
+ 1129  chmod g+rw log
+ 1130  ls
+ 1131  ls
+ 1132  ls -ltr
+ 1133  ls
+ 1134  chmod g+rw log/
+ 1135  ls -ltr
+ 1136  chmod g+rw System\ Volume\ Information/
+ 1137  ls -ltr
+ 1138  rm -rf log/
+ 1139  ls
+ 1140  ps
+ 1141  ps -aux
+ 1142  shutdown +20
+ 1143  sudo apt-get install ./google-chrome-stable_current_amd64.deb
+ 1144  sudo leafpad /usr/share/applications/google-chrome.desktop
+ 1145  ftp
+ 1146  ftps://aa@192.168.0.140:9000~
+ 1147  ftps://aa@192.168.0.140:9000
+ 1148  ftps://192.168.0.140:9000
+ 1149  clear
+ 1150  ftp -i 192.168.0.140:9000
+ 1151  ftp -i 192.168.0.140
+ 1152  ftp -i 192.168.0.140 9000
+ 1153  ftp -i 192.168.0.140 1024
+ 1154  sudo apt install gvfs-backends 
+ 1155  clear
+ 1156  sudo apt install vsftpd
+ 1157  status vsftpd.service
+ 1158  sudo systemctl status vsftpd.service
+ 1159  gedit  /etc/vsftpd.conf 
+ 1160  clear
+ 1161  sudo apt install gvfs gvfs-backends gvfs-fuse -y
+ 1162  sudo apt autoremove
+ 1163  killall thunar
+ 1164  systemctl restart avahi-daemon
+ 1165  thunar
+ 1166  sudo systemctl enable --now avahi-daemon
+ 1167  sudo apt install samba -y
+ 1168  sudo systemctl restart smbd
+ 1169  sudo apt update
+ 1170  sudo apt install gvfs gvfs-backends gvfs-fuse samba smbclient avahi-daemon -y
+ 1171  sudo systemctl enable --now avahi-daemon
+ 1172  sudo systemctl enable --now smbd nmbd
+ 1173  sudo systemctl restart avahi-daemon
+ 1174  sudo systemctl restart smbd nmbd
+ 1175  killall thunar
+ 1176  gvfs-mount --list
+ 1177  samba
+ 1178  sa.a
+ 1179  samba
+ 1180  sudo apt install gvfs-backends gvfs-bin
+ 1181  sudo apt install gvfs-backends gvfs-info
+ 1182  sudo apt install gvfs-backends exit
+ 1183  clear
+ 1184  ftp
+ 1185  ftp -i 192.168.0.212 9000
+ 1186  ftp -i 192.168.0.140 9000
+ 1187  ftp://192.168.0.140:8304
+ 1188  ftp -i 192.168.0.140 8304
+ 1189  sudo mkdir -p /mnt/networkshare
+ 1190  ps aux | grep gvfs
+ 1191  killall gvfsd
+ 1192  killall gvfsd-smb-browse
+ 1193  sudo systemctl stop ufw
+ 1194  sudo systemctl stop firewalld
+ 1195  sudo ufw allow 137/udp
+ 1196  sudo ufw allow 138/udp
+ 1197  sudo ufw allow 139/tcp
+ 1198  sudo ufw allow 445/tcp
+ 1199  sudo ufw reload
+ 1200  thunar -q && GVFS_DEBUG=1 thunar
+ 1201  exit
+ 1202  shutdown +10
+ 1203  sudo apt update
+ 1204  sudo apt upgrade code
+ 1205  code.
+ 1206  sudo apt autoclean
+ 1207  sudo apt-get autoremove
+ 1208  exit
+ 1209  sudo apt-get autoremove
+ 1210  google-chrome
+ 1211  sudo leafpad /usr/share/applications/google-chrome.desktop
+ 1212  xset -dpms
+ 1213  xset s off
+ 1214  xset -dpms
+ 1215  xset s off
+ 1216  shutdown +10
+ 1217  shutdown +1
+ 1218  shutdown +10
+ 1219  ls
+ 1220  ls -ltr 
+ 1221  cat op.log
+ 1222  ls 
+ 1223  cd ..
+ 1224  ls 
+ 1225  ls
+ 1226  pwd
+ 1227  chmod 777 MIJIA_RECORD_VIDEO/
+ 1228  sudo chmod 480 MIJIA_RECORD_VIDEO/
+ 1229  chmod 777 MIJIA_RECORD_VIDEO/
+ 1230  sudo chmod 777 MIJIA_RECORD_VIDEO/
+ 1231  pwd
+ 1232  ls
+ 1233  clear
+ 1234  [200~ls -l /media/root/9016-4EF8
+ 1235  ls -l /media/root/9016-4EF8
+ 1236  sudo mount -o remount,rw /media/root/9016-4EF8
+ 1237  sudo dmesg | tail -20
+ 1238  sudo fsck -y /dev/sdX
+ 1239  sudo ntfsfix /dev/sdX
+ 1240  clear
+ 1241  lsblk
+ 1242  ls -l /media/root/9016-4EF8
+ 1243  mount | grep 9016-4EF8
+ 1244  dmesg | tail -20
+ 1245  sudo mount -o remount,rw /media/root/9016-4EF8
+ 1246  mount | grep 9016-4EF8
+ 1247  sudo fsck -a /dev/mmcblk0p1
+ 1248  sudo umount /media/root/9016-4EF8
+ 1249  sudo mkfs.vfat -F 32 /dev/mmcblk0p1
+ 1250  sudo hdparm -r /dev/mmcblk0
+ 1251  sudo hdparm -r0 /dev/mmcblk0
+ 1252  sudo hdparm -r /dev/mmcblk0
+ 1253  sudo hdparm -r0 /dev/mmcblk0
+ 1254  sudo mkfs.vfat -F 32 /dev/mmcblk0p1
+ 1255  shutdown +10
+ 1256  cd ..
+ 1257  ls
+ 1258  cd ...
+ 1259  shutdown +10
+ 1260  sudo apt update
+ 1261  sudo apt-get update
+ 1262  sudo apt-get upgrade
+ 1263  shutdown +10
+ 1264  code .
+ 1265  cd  assets/img/
+ 1266  sudo apt install 7zip
+ 1267  7z -h
+ 1268  top
+ 1269  top df
+ 1270  df -h 
+ 1271  df -h >10 mb
+ 1272  df -h > 10 mb
+ 1273  df -h > 100 mb
+ 1274  df -h |awk 2
+ 1275  df -h |awk {2}
+ 1276  df -h |awk {}
+ 1277  df -h |awk {0}
+ 1278  df -h|grep  |awk {0}
+ 1279  find i name
+ 1280  find i
+ 1281  find 
+ 1282  df -h 
+ 1283  free -h
+ 1284  top
+ 1285  top | head 5
+ 1286  top | head -5
+ 1287  ls -a 
+ 1288  find /path/to/dir -type f -name "*.log"
+ 1289  shutdown +1
+ 1290  httrack 
+ 1291  ls  -al --time-style=+%D | grep `date +%D`
+ 1292  shutdown +5
+ 1293  sudo ps -ef 
+ 1294  sudo ps -ef | grep python
+ 1295  shutdown +5
+ 1296  pwd
+ 1297  cd
+ 1298  ls
+ 1299  pwd
+ 1300  cd /VIRUS
+ 1301  python3  find_duplicate_files.py 
+ 1302  cd ..
+ 1303  cd /root/
+ 1304  ls -d
+ 1305  ls -d */root
+ 1306  ls -d */
+ 1307  pwd
+ 1308  clear
+ 1309  cd /VIRUS/
+ 1310  python3 find_duplicate_files_home.py > homemedia.txt
+ 1311  vi find_duplicate_files.py
+ 1312  pwd
+ 1313  python3 find_duplicate_files.py 
+ 1314  cd  0personals/
+ 1315  pwd
+ 1316  python3 find_duplicate_files.py 
+ 1317  cd  ..
+ 1318  python3 find_duplicate_files.py 
+ 1319  sudo python3 find_duplicates.py
+ 1320  sudo python3 find_duplicate_files.py 
+ 1321  clear
+ 1322  sudo python3 find_duplicate_files.py 
+ 1323  sudo python3 fin
+ 1324  clear
+ 1325  sudo python3 find_duplicate_files.py 
+ 1326  sudo python3 find_duplicate_files.py  >duplctae_data.txt
+ 1327  clear
+ 1328  sudo python3 find_duplicate_
+ 1329  sudo python3 find_duplicate_files.py
+ 1330  claer
+ 1331  clear
+ 1332  sudo python3 find_duplicate_files.py  > media.txt
+ 1333  sudo python3 find_duplicate_files.py  
+ 1334  sudo python3 find_duplicate_files.py   >viruesmedis.txt
+ 1335  sudo python3 find_duplicate_files.py   >rootmedia.txt
+ 1336  systemctl --user enable pulseaudio
+ 1337  systemctl --user start pulseaudio
+ 1338  sudo apt-get install ./google-chrome-stable_current_amd64.deb
+ 1339  sudo leafpad /usr/share/applications/google-chrome.desktop
+ 1340  shutdown +5
+ 1341  sudo apt-get update
+ 1342  sudo apt-get clean
+ 1343  sudo apt-get  update
+ 1344  sudo curl -fsSL https://archive.kali.org/archive-key.asc | gpg --dearmor -o /etc/apt/trusted.gpg.d/kali-archive-keyring.gpg
+ 1345  sudo apt-get  update
+ 1346  clear
+ 1347  sudo apt-get update
+ 1348  sudo apt-get install firefox
+ 1349  shutdown +5
+ 1350  [200~pip install pillow
+ 1351  ~pip install pillow
+ 1352  pip3 install pillow
+ 1353  pip install pillow
+ 1354  cd  Desktop/
+ 1355  ls
+ 1356  cd quotes/
+ 1357  vi quotes.csv
+ 1358  ls
+ 1359  cat quotes.csv 
+ 1360  cat qotes.py 
+ 1361  python3 geminiai.py 
+ 1362  clear
+ 1363  python3 geminiai.py 
+ 1364  clear
+ 1365  python3 geminiai.py 
+ 1366  clear
+ 1367  python3 geminiai.py 
+ 1368  ls 
+ 1369  cd 
+ 1370  ls
+ 1371  cd
+ 1372  ~
+ 1373  ls
+ 1374  cd Desktop/
+ 1375  ls
+ 1376  cd web/
+ 1377  pwd
+ 1378  cd ..
+ 1379  tree ecommerce/
+ 1380  ls
+ 1381  cd ecommerce/
+ 1382  ls
+ 1383  pwd 
+ 1384  ls 
+ 1385  clear
+ 1386  tree -I vendor /opt/lampp/htdocs/ecommerce
+ 1387  tree -I "vendor|*.jpg|*.png|*.jpeg|*.gif|*.bmp|*.svg|*.webp" /opt/lampp/htdocs/ecommerce
+ 1388  chmod -R 0755 assets/images/products/
+ 1389  sudo gedit  /opt/lampp/etc/php.ini
+ 1390  sudo mkdir -p /opt/lampp/temp
+ 1391  ls
+ 1392  sudo chmod -R 0755 assets/images/products/
+ 1393  ls -ltr  assets/
+ 1394  ls
+ 1395  ls sltr
+ 1396  ls -ltr
+ 1397  sudo chown -R www-data:www-data /BRAIN O VISION/BEEA/
+ 1398  sudo chmod -R 755 /BRAIN O VISION/BEEA/
+ 1399  sudo chown -R www-data:www-data /home/bala/
+ 1400  sudo chmod -R 755 /home/bala/
+ 1401  sudo apt-get clean
+ 1402  sudo apt-get update
+ 1403  sudo apt-get upgrade
+ 1404  exit 
+ 1405  tree -I "vendor|*.jpg|*.png|*.jpeg|*.gif|*.bmp|*.svg|*.webp" /opt/lampp/htdocs/ecommerce
+ 1406  cat /opt/lampp/logs/error_log 
+ 1407  exit
+ 1408  find . -type f | sort | nl
+ 1409  find . -type f -exec basename {} \; | sort | nl
+ 1410  pwd
+ 1411  gedit movement.py
+ 1412  python3 movement.py 
+ 1413  gedit movement.py
+ 1414  clear
+ 1415  gedit movement.py
+ 1416  python3 movement.py 
+ 1417  xit 
+ 1418  exit
+ 1419  pwd
+ 1420  cd Downloads/
+ 1421  PWD
+ 1422  pwd
+ 1423  gedit video.py
+ 1424  python3 video.py
+ 1425  gedit video.py
+ 1426  python3 video.py
+ 1427  gedit video.py
+ 1428  python3 video.py
+ 1429  gedit pptmove.py
+ 1430  ls
+ 1431  ls >listoffileindownlaod.txt
+ 1432  python3  pptmove.py
+ 1433  clear
+ 1434  ps 
+ 1435  top 
+ 1436  htop
+ 1437  top 
+ 1438  cler 
+ 1439  clear
+ 1440  find . -type f -name "*.i8mg"
+ 1441  find . -type f -name "*.img"
+ 1442  cd  Downloads/
+ 1443  ls -ltr 
+ 1444  cd ..
+ 1445  cd /root/
+ 1446  ls
+ 1447  cd /VIRUS/
+ 1448  ls
+ 1449  cd 0personals/
+ 1450  ls
+ 1451  pwd
+ 1452  gedit dup.py
+ 1453  python3 dup.py 
+ 1454  python3 dup.py 
+ 1455  python3 dup.py  >duplciatedata.txt
+ 1456  cd /VIRUS/0personals/
+ 1457  gedit movd.py
+ 1458  mkdir Videos
+ 1459  python3 movd.py 
+ 1460  gedit movd.py
+ 1461  python3 movd.py 
+ 1462  clear
+ 1463  python3 movd.py 
+ 1464  ~/.bash_history
+ 1465  python3 dup.py  > lefovedup.txt
+ 1466  clear
+ 1467  cd  Videos/
+ 1468  ls 
+ 1469  ls -ltr >listoffiesinvideo.txt
+ 1470  ls >listoffilesinvideo.txt
+ 1471  cd ..
+ 1472  cd /VIRUS/ ls >left.txt
+ 1473  cd Videos/
+ 1474  cp  listoffilesinvideo.txt /VIRUS/0personals/
+ 1475  cd ..
+ 1476  gedit movevideo.py
+ 1477  python3 movevideo.py 
+ 1478  clear
+ 1479  gedit moveimag.py
+ 1480  python3 moveimag.py 
+ 1481  cd Videos/
+ 1482  ls
+ 1483  cd ..
+ 1484  python3 moveimag.py 
+ 1485  ls
+ 1486  clear
+ 1487  gedit listfileinsdub.py
+ 1488  python3 listfileinsdub.py  >leftfilebackdire.txt
+ 1489  cd  /root/Desktop/desktopalldata/
+ 1490  ls
+ 1491  ls -d
+ 1492  ls -a 
+ 1493  clear
+ 1494  ls
+ 1495  cd
+ 1496  cd  /VIRUS/0personals/
+ 1497  gedit finddesk.py
+ 1498  python3 finddesk.py 
+ 1499  xsel -o > output.txt
+ 1500  cat /dev/vcs1 > tty1-output.txt
+ 1501  gedit tty1-output.txt
+ 1502  sudo apt-get install xsel
+ 1503  xsel -o > output.txt
+ 1504  gedit output.txt 
+ 1505  exit 
+ 1506  exit 
+ 1507  import os
+ 1508  import shutil
+ 1509  def move_duplicate_media(duplicate_list_file, destination_folder):
+ 1510  ---
+ 1511  ```python
+ 1512  if __name__ == "__main__":
+ 1513      duplicate_files_txt = "duplicate_files.txt"  # Your duplicate files list
+ 1514      destination_videos_folder = "/VIRUS/0personals/Videos/" # Your destination folder for all media
+ 1515      move_duplicate_media(duplicate_files_txt, destination_videos_folder):qq
+ 1516  exit
+ 1517  pip3 install moviepy
+ 1518  cd Downloads/
+ 1519  pwd 
+ 1520  cd instapost/
+ 1521  gedit resize.py
+ 1522  pip install moviepy
+ 1523  pip install numpy
+ 1524  mkdir  instapost
+ 1525  cd  instapost/
+ 1526  gedit resizeivdeo.py
+ 1527  cd
+ 1528  cd Downloads/instapost/
+ 1529  clear
+ 1530  python3 resize.py 
+ 1531  pip install moviepy
+ 1532  python -m pip install --upgrade pip
+ 1533  pip install moviepy
+ 1534  python3 resize.py 
+ 1535  clear
+ 1536  gedit resize_videos.py
+ 1537  python3  resize_videos.py
+ 1538  pip install moviepy
+ 1539  sudo apt update && sudo apt install ffmpeg
+ 1540  logout
+ 1541  shutdown +2
+ 1542  sudo apt install openjdk-17-jdk -y
+ 1543  curl -I http://localhost:8080
+ 1544  sudo tail -n 50 /var/log/jenkins/jenkins.log
+ 1545  2021-08-06 13:32:05.631+0000 [id=1]     INFO    o.e.j.s.s.DefaultSessionIdManager#doStart: No SessionScavenger set, using defaults
+ 1546  2021-08-06 13:32:05.641+0000 [id=1]     INFO    o.e.j.server.session.HouseKeeper#startScavenging: node0 Scavenging every 660000ms
+ 1547  2021-08-06 13:32:08.185+0000 [id=1]     INFO    hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/lib/jenkins found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+ 1548  2021-08-06 13:32:09.068+0000 [id=1]     INFO    o.e.j.s.handler.ContextHandler#doStart: Started w.@1c852c0f{Jenkins v2.289.3,/,file:///var/cache/jenkins/war/,AVAILABLE}{/var/cache/jenkins/war}
+ 1549  2021-08-06 13:32:09.202+0000 [id=1]     INFO    o.e.j.server.AbstractConnector#doStart: Started ServerConnector@69d9c55{HTTP/1.1, (http/1.1)}{0.0.0.0:8081}
+ 1550  2021-08-06 13:32:09.204+0000 [id=1]     INFO    org.eclipse.jetty.server.Server#doStart: Started @10096ms
+ 1551  2021-08-06 13:32:09.210+0000 [id=22]    INFO    winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+ 1552  2021-08-06 13:32:12.041+0000 [id=28]    INFO    jenkins.InitReactorRunner$1#onAttained: Started initialization
+ 1553  2021-08-06 13:32:18.800+0000 [id=28]    INFO    jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+ 1554  2021-08-06 13:32:35.778+0000 [id=33]    INFO    jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+ 1555  2021-08-06 13:32:35.917+0000 [id=31]    INFO    jenkins.InitReactorRunner$1#onAttained: Started all plugins
+ 1556  2021-08-06 13:32:40.391+0000 [id=32]    INFO    jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+ 1557  2021-08-06 13:32:40.645+0000 [id=33]    INFO    jenkins.InitReactorRunner$1#onAttained: System config loaded
+ 1558  2021-08-06 13:32:40.645+0000 [id=33]    INFO    jenkins.InitReactorRunner$1#onAttained: System config adapted
+ 1559  2021-08-06 13:32:41.025+0000 [id=27]    INFO    jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+ 1560  2021-08-06 13:32:41.027+0000 [id=27]    INFO    jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+ 1561  2021-08-06 13:32:41.452+0000 [id=47]    INFO    hudson.model.AsyncPeriodicWork#lambda$doRun$0: Started Download metadata
+ 1562  2021-08-06 13:32:41.530+0000 [id=47]    INFO    hudson.model.AsyncPeriodicWork#lambda$doRun$0: Finished Download metadata. 75 ms
+ 1563  2021-08-06 13:32:41.846+0000 [id=27]    INFO    jenkins.InitReactorRunner$1#onAttained: Completed initialization
+ 1564  2021-08-06 13:32:41.934+0000 [id=21]    INFO    hudson.WebAppMain$3#run: Jenkins is fully up and running
+ 1565  2021-08-06 13:46:49.639+0000 [id=68]    INFO    hudson.model.AsyncPeriodicWork#lambda$doRun$0: Started Periodic background build discarder
+ 1566  2021-08-06 13:46:49.644+0000 [id=68]    INFO    hudson.model.AsyncPeriodicWork#lambda$doRun$0: Finished Periodic background build discarder. 3 ms
+ 1567  2021-08-06 14:24:18.824+0000 [id=23]    INFO    winstone.Logger#logInternal: JVM is terminating. Shutting down Jetty
+ 1568  Running from: /usr/share/jenkins/jenkins.war
+ 1569  2021-08-06 16:48:01.548+0000 [id=1]     INFO    org.eclipse.jetty.util.log.Log#initialized: Logging initialized @2011ms to org.eclipse.jetty.util.log.JavaUtilLog
+ 1570  2021-08-06 16:48:01.734+0000 [id=1]     INFO    winstone.Logger#logInternal: Beginning extraction from war file
+ 1571  2021-08-06 16:48:01.768+0000 [id=1]     WARNING o.e.j.s.handler.ContextHandler#setContextPath: Empty contextPath
+ 1572  2021-08-06 16:48:01.839+0000 [id=1]     INFO    org.eclipse.jetty.server.Server#doStart: jetty-9.4.41.v20210516; built: 2021-05-16T23:56:28.993Z; git: 98607f93c7833e7dc59489b13f3cb0a114fb9f4c; jvm 1.8.0_212-8u212-b01-1-b01
+ 1573  2021-08-06 16:48:02.264+0000 [id=1]     INFO    o.e.j.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.jsp.JettyJspServlet
+ 1574  2021-08-06 16:48:02.339+0000 [id=1]     INFO    o.e.j.s.s.DefaultSessionIdManager#doStart: DefaultSessionIdManager workerName=node0
+ 1575  2021-08-06 16:48:02.339+0000 [id=1]     INFO    o.e.j.s.s.DefaultSessionIdManager#doStart: No SessionScavenger set, using defaults
+ 1576  2021-08-06 16:48:02.342+0000 [id=1]     INFO    o.e.j.server.session.HouseKeeper#startScavenging: node0 Scavenging every 600000ms
+ 1577  2021-08-06 16:48:03.292+0000 [id=1]     INFO    hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/lib/jenkins found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+ 1578  2021-08-06 16:48:03.566+0000 [id=1]     INFO    o.e.j.s.handler.ContextHandler#doStart: Started w.@1c852c0f{Jenkins v2.289.3,/,file:///var/cache/jenkins/war/,AVAILABLE}{/var/cache/jenkins/war}
+ 1579  2021-08-06 16:48:03.589+0000 [id=1]     INFO    o.e.j.server.AbstractConnector#doStart: Started ServerConnector@69d9c55{HTTP/1.1, (http/1.1)}{0.0.0.0:8081}
+ 1580  2021-08-06 16:48:03.590+0000 [id=1]     INFO    org.eclipse.jetty.server.Server#doStart: Started @4054ms
+ 1581  2021-08-06 16:48:03.591+0000 [id=22]    INFO    winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+ 1582  2021-08-06 16:48:05.195+0000 [id=28]    INFO    jenkins.InitReactorRunner$1#onAttained: Started initialization
+ 1583  2021-08-06 16:48:05.644+0000 [id=29]    INFO    jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+ 1584  2021-08-06 16:48:14.450+0000 [id=32]    INFO    jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+ 1585  2021-08-06 16:48:14.491+0000 [id=28]    INFO    jenkins.InitReactorRunner$1#onAttained: Started all plugins
+ 1586  2021-08-06 16:48:16.998+0000 [id=30]    INFO    jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+ 1587  2021-08-06 16:48:17.096+0000 [id=32]    INFO    jenkins.InitReactorRunner$1#onAttained: System config loaded
+ 1588  2021-08-06 16:48:17.097+0000 [id=28]    INFO    jenkins.InitReactorRunner$1#onAttained: System config adapted
+ 1589  2021-08-06 16:48:17.171+0000 [id=32]    INFO    jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+ 1590  2021-08-06 16:48:17.171+0000 [id=27]    INFO    jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+ 1591  2021-08-06 16:48:17.199+0000 [id=48]    INFO    hudson.model.AsyncPeriodicWork#lambda$doRun$0: Started Download metadata
+ 1592  2021-08-06 16:48:17.257+0000 [id=48]    INFO    hudson.model.AsyncPeriodicWork#lambda$doRun$0: Finished Download metadata. 43 ms
+ 1593  2021-08-06 16:48:17.412+0000 [id=33]    INFO    jenkins.InitReactorRunner$1#onAttained: Completed initialization
+ 1594  2021-08-06 16:48:17.507+0000 [
+ 1595  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+ 1596  sudo systemctl status jenkins
+ 1597  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+ 1598  sudo systemctl stop jenkins
+ 1599  sudo mkdir -p /var/lib/jenkins
+ 1600  sudo chown -R jenkins:jenkins /var/lib/jenkins
+ 1601  sudo gedit  /var/lib/jenkins/jenkins.install.UpgradeWizard.state
+ 1602  sudo mkdir -p /var/lib/jenkins/users/admin
+ 1603  sudo nano /var/lib/jenkins/users/admin/config.xml
+ 1604  sudo gedit  /var/lib/jenkins/users/admin/config.xml
+ 1605  <?xml version='1.1' encoding='UTF-8'?>
+ 1606  <user>
+ 1607  </user>
+ 1608  sudo chown -R jenkins:jenkins /var/lib/jenkins
+ 1609  sudo systemctl start jenkins
+ 1610  sudo systemctl status jenkins | grep Environment
+ 1611  sudo nano /var/lib/jenkins/config.xml
+ 1612  sudo gedit  /var/lib/jenkins/config.xml
+ 1613  sudo systemctl restart jenkins
+ 1614  cd Desktop/
+ 1615  cd python/
+ 1616  python3 smail.py 
+ 1617  ssh-keygen -t rsa -b 4096 -C "maheshwar1206@gmail.com"
+ 1618  cat /root/.ssh/id_rsa.pub
+ 1619  ssh -T git@github.com
+ 1620  mv ~/Downloads/Bala.pem ~/.ssh/
+ 1621  chmod 400 ~/.ssh/Bala.pem
+ 1622  sudo apt update && sudo apt upgrade -y
+ 1623  sudo apt install openjdk-17-jdk -y
+ 1624  [200~java -version
+ 1625  ~
+ 1626  java -version
+ 1627  curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee     /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+ 1628  echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]     https://pkg.jenkins.io/debian-stable binary/ |     sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+ 1629  sudo apt update
+ 1630  sudo apt install jenkins -y
+ 1631  sudo systemctl enable jenkins
+ 1632  sudo systemctl start jenkins
+ 1633  sudo systemctl status jenkins
+ 1634  sudo systemctl enable jenkins
+ 1635  sudo systemctl start jenkins
+ 1636  systemctl status jenkins.service -l
+ 1637  sudo apt install openjdk-17-jdk -y
+ 1638  echo "deb http://deb.debian.org/debian bullseye main contrib non-free" | sudo tee -a /etc/apt/sources.list
+ 1639  sudo apt update
+ 1640  sudo apt install openjdk-17-jdk -y
+ 1641  sudo apt --fix-broken install -y
+ 1642  sudo apt remove openjdk-17-jre-headless
+ 1643  sudo apt install openjdk-17-jdk -y
+ 1644  sudo apt install jenkins -y
+ 1645  sudo systemctl enable jenkins
+ 1646  sudo systemctl start jenkins
+ 1647  sudo systemctl status jenkins
+ 1648  sudo nano /etc/default/jenkins
+ 1649  gedit  /etc/default/jenkins
+ 1650  sudo systemctl status jenkins
+ 1651  sudo systemctl start jenkins
+ 1652  sudo lsof -i:8080
+ 1653  sudo systemctl daemon-reload
+ 1654  sudo systemctl restart jenkins
+ 1655  sudo systemctl status jenkins
+ 1656  java -version
+ 1657  sudo systemctl daemon-reload
+ 1658  sudo systemctl restart jenkins
+ 1659  sudo systemctl status jenkins
+ 1660  sudo systemctl daemon-reload
+ 1661  sudo systemctl restart jenkins
+ 1662  java 
+ 1663  java -version
+ 1664  :w
+ 1665  jenkins
+ 1666  java -version
+ 1667  # This should show you all installed Java versions
+ 1668  update-alternatives --display java
+ 1669  # This should show you the path to the currently used `java` executable
+ 1670  readlink -f $(which java)
+ 1671  update-alternatives --display java
+ 1672  readlink -f $(which java)
+ 1673  sudo update-alternatives --config java
+ 1674  nano ~/.bashrc
+ 1675  export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+ 1676  export PATH=$JAVA_HOME/bin:$PATH
+ 1677  gedit  ~/.bashrc
+ 1678  echo $JAVA_HOME
+ 1679  sudo systemctl daemon-reload
+ 1680  sudo systemctl restart jenkins
+ 1681  sudo systemctl status jenkins
+ 1682  sudo ufw allow 8080
+ 1683  sudo ufw reload
+ 1684  sudo lsof -i:8080
+ 1685  curl -I http://localhost:8080
+ 1686  sudo systemctl status jenkins --no-pager
+ 1687  sudo systemctl restart jenkins
+ 1688  exit
+ 1689  sudo systemctl status jenkins
+ 1690  sudo systemctl stop jenkins
+ 1691  sudo systemctl status jenkins
+ 1692  clear
+ 1693  exit
+ 1694  shutdown +2
+ 1695  touch Dockerfile
+ 1696  touch index.php
+ 1697  touch docker-compose.yml
+ 1698  touch docker-build.sh
+ 1699  chmod +x docker-build.sh
+ 1700  ./docker-build-and-push.sh
+ 1701  ./docker-build.sh
+ 1702  docker images
+ 1703  docker  run -d balamaheshwar/balaphp
+ 1704  docker run -d -p 8080:80 abcee/balaphp
+ 1705  docker run -d -p 8080:80 abcee/balaphp:latest
+ 1706  #docker run -d -p 8080:80 balamaheshwar/balaphp
+ 1707  docker run -d -p 8080:80 balamaheshwar/balaphp
+ 1708  balamaheshwar
+ 1709  docker run -it --name my-php-container -p 8080:80 balamaheshwar/balaphp bash
+ 1710  docker run -it --name my-php-container  balamaheshwar/balaphp bash
+ 1711  docker ps 
+ 1712  docker stop balamaheshwar/balaphp
+ 1713  docker  ps -a 
+ 1714  docker stop my-php-container
+ 1715  docker run -it --name my-php-container  balamaheshwar/balaphp bash
+ 1716  docker stop my-php-container
+ 1717  docker  ps -a 
+ 1718  docker stop  7156b27603f2
+ 1719  docker stop 8291a3fb29bf
+ 1720  docker stop  010f5e984c70
+ 1721  docker ps -a 
+ 1722  docker ps 
+ 1723  sudo apt install -y     ca-certificates     curl     gnupg     lsb-release
+ 1724  gedit ~/.docker/config.json
+ 1725  docker login -u balamaheshwar
+ 1726  gedit ~/.docker/config.json
+ 1727  docker login
+ 1728  docker pull alpine
+ 1729  docker  images
+ 1730  docker  ps
+ 1731  sudo apt update
+ 1732  sudo apt upgrade -y
+ 1733  sudo apt install -y     ca-certificates     curl     gnupg     lsb-release
+ 1734  sudo mkdir -p /etc/apt/keyrings
+ 1735  curl -fsSL https://download.docker.com/linux/ubuntu/gpg |     sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+ 1736  echo   "deb [arch=$(dpkg --print-architecture) \
+ 1737    signed-by=/etc/apt/keyrings/docker.gpg] \
+ 1738    https://download.docker.com/linux/ubuntu \
+ 1739    $(lsb_release -cs) stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+ 1740  sudo apt update
+ 1741  sudo mkdir -p /etc/apt/keyrings
+ 1742  curl -fsSL https://download.docker.com/linux/debian/gpg |     sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+ 1743  echo   "deb [arch=$(dpkg --print-architecture) \
+ 1744    signed-by=/etc/apt/keyrings/docker.gpg] \
+ 1745    https://download.docker.com/linux/debian \
+ 1746    $(lsb_release -cs) stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+ 1747  sudo apt update
+ 1748  docker
+ 1749  sudo apt install -y docker.io
+ 1750  sudo systemctl enable docker --now
+ 1751  docker
+ 1752  docker --version
+ 1753  docker login 
+ 1754  shutdown +2
+ 1755  sudo systemctl stop docker
+ 1756  sudo systemctl status docker
+ 1757  sudo service docker stop
+ 1758  sudo systemctl stop jenkins
+ 1759  sudo systemctl stop docker.socket
+ 1760  sudo systemctl stop docker.service
+ 1761  sudo systemctl stop docker.socket
+ 1762  sudo systemctl stop docker.service
+ 1763  sudo systemctl status docker
+ 1764  sudo apt update
+ 1765  sudo apt install snapd
+ 1766  sudo snap install snapd
+ 1767  sudo snap install shotcut --classic
+ 1768  sudo apt install kdenlive
+ 1769  EXIT
+ 1770  sudo systemctl status jenkins
+ 1771  sudo apt-get update && sudo apt-get install -y kubectl
+ 1772  gedit  etc/apt/sources.list.d/docker.list
+ 1773  gedit  /etc/apt/sources.list.d/docker.list
+ 1774  curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+ 1775  sudo apt-get update
+ 1776  docker 
+ 1777  minikube start --driver=docker
+ 1778  curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+ 1779  chmod +x minikube
+ 1780  sudo mv minikube /usr/local/bin/
+ 1781  minikube version
+ 1782  minikube start --driver=docker
+ 1783  kubectl cluster-info
+ 1784  curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
+ 1785  chmod +x kubectl
+ 1786  sudo mv kubectl /usr/local/bin/
+ 1787  kubectl version --client
+ 1788  kubectl cluster-info
+ 1789  kubectl get nodes
+ 1790  kubectl cluster-info
+ 1791  xit 
+ 1792  exit
+ 1793  vlc
+ 1794  cvlc
+ 1795  vlc --help
+ 1796  vlc --restart
+ 1797  vlc
+ 1798  vlc
+ 1799  pip install scrapy
+ 1800  exit
+ 1801  code .
+ 1802  code
+ 1803  shutdown +2
+ 1804  exit
+ 1805  python3 sourceofsite.py 
+ 1806  python3 download_assets.py 
+ 1807  python download_assets.py index.html downloads/
+ 1808  cd ..
+ 1809  clear
+ 1810  python download_assets.py index.html downloads/
+ 1811  exit
+ 1812  tree 
+ 1813  dir 
+ 1814  ls -a
+ 1815  tree -I 'vendor' .
+ 1816  exit
+ 1817  pip install moviepy
+ 1818  cd /root/Desktop/Jenkins/docker/
+ 1819  sudo apt install ffmpeg
+ 1820  python3  test.py  videoplayback.mp4
+ 1821  pip install pytube
+ 1822  cd /root/Desktop/Jenkins/docker/
+ 1823  python3 youttomp3.py  "https://www.youtube.com/watch?v=EPGhEFqHqKg"
+ 1824  pip install yt-dlp
+ 1825  python3 youttomp3.py  "https://www.youtube.com/watch?v=EPGhEFqHqKg"
+ 1826  sudo apt-get install ./google-chrome-stable_current_amd64.deb
+ 1827  sudo leafpad /usr/share/applications/google-chrome.desktop
+ 1828  /media/
+ 1829  cd /media/
+ 1830  ls
+ 1831  cd bala
+ 1832  cd ..
+ 1833  cd root/
+ 1834  ls
+ 1835  blkid
+ 1836  mount /dev/sdb1 usbmnt
+ 1837  exit
+ 1838  sudo apt install nfs-common
+ 1839  sudo apt install cifs-utils
+ 1840  sudo apt install ntfs-sg
+ 1841  mkdir /mnt/storage2
+ 1842  mount /dev/sdb1 /mnt/storage2
+ 1843  pa
+ 1844  passwd bala
+ 1845  exit
+ 1846  cat /etc/passwd
+ 1847  su-
+ 1848  su -
+ 1849  su -bala
+ 1850  su - bala
+ 1851  clear
+ 1852  sudo apt install nfts-3g
+ 1853  sudo umount /dev/sdc1 2>/dev/null
+ 1854  sudo apt install ntfs-3g
+ 1855  Summary:
+ 1856  sudo ntfsfix /dev/sdc1
+ 1857  exit
+ 1858  sudo mkdir -p /mnt/usb
+ 1859  sudo mount -o ro -t ntfs-3g /dev/sdc1 /mnt/usb
+ 1860  sudo pkill mount
+ 1861  sudo pkill testdisk
+ 1862  sudo pkill partprobe
+ 1863  dmesg | tail -n 20
+ 1864  dmesg -w
+ 1865  sudo fuser -v /dev/sdd
+ 1866  shutdown +2
+ 1867  shutdown +1
+ 1868  sudo shutdown +1
+ 1869  whoami
+ 1870  poweroff
+ 1871  systemd-inhibit --list
+ 1872  ls -ld /home/test
+ 1873  ls -ld /home/bala
+ 1874  # 1. Fix ownership of the home directory
+ 1875  chown -R bala:bala /home/bala
+ 1876  # 2. Make sure permissions are correct
+ 1877  chmod 755 /home/bala
+ 1878  chown -R bala:bala /home/bala
+ 1879  cat V
+ 1880  cat /home/bala/.Xauthority
+ 1881  reboot
+ 1882  sudo apt install testdisk -y
+ 1883  sudo testdisk
+ 1884  sudo mkfs.ntfs -f /dev/sdd1 -L WD4TB
+ 1885  sudo mkfs.ntfs -f /dev/sde1 -L WD4TB
+ 1886  sudo partprobe /dev/sdc
+ 1887  ls /dev/sdc*
+ 1888  sudo partprobe /dev/sdc
+ 1889  sudo lsof | grep /dev/sdd
+ 1890  sudo fuser -v /dev/sdd
+ 1891  sudo fuser -vk /dev/sdd
+ 1892  sudo umount -f /dev/sdd1 2>/dev/null
+ 1893  sudo umount -f /dev/sdd 2>/dev/null
+ 1894  mount | grep sdd
+ 1895  sudo wipefs -a /dev/sdd
+ 1896  sudo hdparm -z /dev/sdd
+ 1897  sudo parted /dev/sdd mklabel gpt
+ 1898  sudo apt install code
+ 1899  sudo apt-get clean
+ 1900  sudo apt-get update
+ 1901  free -h
+ 1902  top 
+ 1903  top head 10
+ 1904  top head -10
+ 1905  top help
+ 1906  top  --help 
+ 1907  top -b
+ 1908  clear 
+ 1909  exit
+ 1910  [200~id jenkins
+ 1911  id jenkins
+ 1912  sudo chmod 666 /var/run/docker.sock
+ 1913  exit
+ 1914  sudo usermod -aG docker jenkins
+ 1915  sudo systemctl restart jenkins
+ 1916  exit
+ 1917  docker images 
+ 1918  docker system prune -a -f 
+ 1919  docker images 
+ 1920  sudo shutdown +1
+ 1921  docker images
+ 1922  exit
+ 1923  sudo apt autoremove
+ 1924  df -h 
+ 1925  sudo apt autoremove
+ 1926  terraform 
+ 1927  terraform  -version
+ 1928  terrascan 
+ 1929  sonarqube 
+ 1930  wget -q https://github.com/SonarSource/sonar-scanner-cli/releases/download/5.0.1.3006/sonar-scanner-cli-5.0.1.3006-linux.zip
+ 1931  wget -q https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-5.0.1.3006-linux.zip
+ 1932  mkdir tt
+ 1933  cd tt
+ 1934  wget -q https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-5.0.1.3006-linux.zip
+ 1935  ls
+ 1936  opa version 
+ 1937  terrascan -v 
+ 1938  terrascan -v
+ 1939  terrascan version
+ 1940  terraform -v
+ 1941  clear
+ 1942  exit 
+ 1943  sudo shutdown +1
+ 1944  sudo shutdown +5
+ 1945  cd Desktop/poc/
+ 1946  ssh-keygen -t rsa -b 4096 -C "balamaheshwardundigalla@gmail.com"
+ 1947  eval "$(ssh-agent -s)"
+ 1948  ssh-add ~/.ssh/id_rsa
+ 1949  cat ~/.ssh/id_rsa.pub
+ 1950  git clone https://github.com/DBalamaheshwar/Devopsautomation.git
+ 1951  ssh-keygen -t rsa -b 4096 -C "balamaheshwardundigalla@gmail.com" -f ~/.ssh/id_rsa_second
+ 1952  eval "$(ssh-agent -s)"
+ 1953  ssh-add ~/.ssh/id_rsa_second
+ 1954  git clone https://github.com/DBalamaheshwar/Devopsautomation.git
+ 1955  git remote -v
+ 1956  git config user.name
+ 1957  git config user.email
+ 1958  git remote -v
+ 1959  git@github.com:DBalamaheshwar/Devopsautomation.git
+ 1960  git clone  git@github.com:DBalamaheshwar/Devopsautomation.git
+ 1961  code .
+ 1962  code
+ 1963  cd Devopsautomation/
+ 1964  cls
+ 1965  clea
+ 1966  clear
+ 1967  git status 
+ 1968  git  diff  terraform/provider.tf
+ 1969  git add 
+ 1970  git add .
+ 1971  git commit -m "updated terraform issue"
+ 1972  git push
+ 1973  cd terraform
+ 1974  terraform init
+ 1975  terraform
+ 1976  terrascan
+ 1977  cd ..
+ 1978  unzip -o terraform_1.3.0_linux_amd64.zip || true  # Force overwrite without prompt
+ 1979  echo "Adding /usr/local/bin to PATH..."
+ 1980  echo "Unzipping Terraform..."
+ 1981  unzip -o terraform_1.3.0_linux_amd64.zip || true  # Force overwrite without prompt
+ 1982  # Step 3: Move Terraform binary to /usr/local/bin (requires sudo)
+ 1983  echo "Moving Terraform to /usr/local/bin..."
+ 1984  sudo mv terraform /usr/local/bin/
+ 1985  # Step 4: Set executable permissions for the Terraform binary
+ 1986  echo "Setting executable permissions for Terraform..."
+ 1987  sudo chmod +x /usr/local/bin/terraform
+ 1988  # Step 5: Verify Terraform installation by checking its version
+ 1989  echo "Verifying Terraform installation..."
+ 1990  terraform -v
+ 1991  # Step 6: Ensure /usr/local/bin is in the PATH (optional)
+ 1992  if ! echo $PATH | grep -q "/usr/local/bin"; then     echo "Adding /usr/local/bin to PATH...";     export PATH=$PATH:/usr/local/bin;     echo "export PATH=$PATH:/usr/local/bin" >> ~/.bashrc;     source ~/.bashrc; fi
+ 1993  # Step 7: Run Terraform commands (example)
+ 1994  echo "Running Terraform init and plan..."
+ 1995  cd  Devopsautomation/terraform/
+ 1996  terraform init
+ 1997  terraform plan
+ 1998  cd ,,
+ 1999  cd ..
+ 2000  cd gcp-terraform/
+ 2001  terraform init
+ 2002  cd ..
+ 2003  GOOGLE_APPLICATION_CREDENTIALS="/D Drive/perfect-reducer-477806-j9-4b3e98e01e86.json"
+ 2004  cd Devopsautomation/gcp-terraform/
+ 2005  terraform init
+ 2006  export GOOGLE_APPLICATION_CREDENTIALS="/D Drive/perfect-reducer-477806-j9-4b3e98e01e86.json"
+ 2007  terraform init
+ 2008  [200~gcloud projects add-iam-policy-binding perfect-reducer-477806-j9    --member="serviceAccount:kali-poc@perfect-reducer-477806-j9.iam.gserviceaccount.com" \
+ 2009  terraform init
+ 2010  terraform plan
+ 2011  terraform init
+ 2012  terraform plan
+ 2013  terraform plan -out=tfplan || true
+ 2014  terrascan
+ 2015  cd ..
+ 2016  wget -q https://github.com/accurics/terrascan/releases/download/v1.17.0/terrascan_1.17.0_Linux_x86_64.tar.gz
+ 2017  cd Devopsautomation/gcp-terraform/
+ 2018  pwd
+ 2019  terrascan scan -i terraform -p /root/Desktop/poc/Devopsautomation/gcp-terraform -o json > /root/Desktop/poc/Devopsautomation/gcp-terraform}/terrascan-aws-1.json || true  
+ 2020  terrascan scan -i terraform -p /root/Desktop/poc/Devopsautomation/gcp-terraform -o json > /root/Desktop/poc/Devopsautomation/gcp-terraform/terrascan-aws-1.json || true    
+ 2021  terrascan scan -i terraform -p /root/Desktop/poc/Devopsautomation/gcp-terraform -o json > 1.json
+ 2022  terrascan scan -i terraform -p /root/Desktop/poc/Devopsautomation/gcp-terraform -o json > /root/Desktop/poc/Devopsautomation/gcp-terraform/reports/terrascan-report.json
+ 2023  terrascan scan -i terraform -p /root/Desktop/poc/Devopsautomation/gcp-terraform -o json 
+ 2024  history  >1.txt
+ 2025  history  > 21.txt

@@ -1,0 +1,10 @@
+# .terrascan.yml
+policy:
+  exclude:
+    - .terraform/
+
+
+output:
+  format: json
+  path: /root/Desktop/poc/Devopsautomation/gcp-terraform/terrascan_output.json
+

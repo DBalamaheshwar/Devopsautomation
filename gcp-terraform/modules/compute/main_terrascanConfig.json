@@ -1,0 +1,92 @@
+{
+	"terrascanConfig": {
+		"google_compute_instance": [
+			{
+				"id": "google_compute_instance.vm",
+				"name": "vm",
+				"module_name": "root",
+				"source": "main.tf",
+				"line": 15,
+				"type": "google_compute_instance",
+				"config": {
+					"boot_disk": [
+						{
+							"initialize_params": [
+								{
+									"image": "debian-cloud/debian-11"
+								}
+							]
+						}
+					],
+					"labels": "${var.labels}",
+					"machine_type": "${var.machine_type}",
+					"metadata": {
+						"startup-script": "#! /bin/bash\n\n# Install google logging agent\ncurl -sSO https://dl.google.com/cloudagents/add-google-cloud-ops-agent-repo.sh\nsudo bash add-google-cloud-ops-agent-repo.sh --also-install\n\necho \"Startup script executed at: $(date)\" >> /var/log/startup.log\n"
+					},
+					"name": "terraform-gcp-vm",
+					"network_interface": [
+						{
+							"access_config": [
+								{}
+							],
+							"network": "${var.network_self_link}",
+							"subnetwork": "${var.subnet_self_link}"
+						}
+					],
+					"service_account": [
+						{
+							"email": "${google_service_account.vm_sa.email}",
+							"scopes": [
+								"cloud-platform"
+							]
+						}
+					],
+					"zone": "${var.zone}"
+				},
+				"skip_rules": null,
+				"max_severity": "",
+				"min_severity": ""
+			}
+		],
+		"google_project_iam_member": [
+			{
+				"id": "google_project_iam_member.sa_storage_admin",
+				"name": "sa_storage_admin",
+				"module_name": "root",
+				"source": "main.tf",
+				"line": 8,
+				"type": "google_project_iam_member",
+				"config": {
+					"member": "serviceAccount:${google_service_account.vm_sa.email}",
+					"project": "${var.project_id}",
+					"role": "roles/storage.admin"
+				},
+				"skip_rules": null,
+				"max_severity": "",
+				"min_severity": ""
+			}
+		],
+		"google_service_account": [
+			{
+				"id": "google_service_account.vm_sa",
+				"name": "vm_sa",
+				"module_name": "root",
+				"source": "main.tf",
+				"line": 1,
+				"type": "google_service_account",
+				"config": {
+					"account_id": "vm-service-account",
+					"display_name": "VM Service Account"
+				},
+				"skip_rules": null,
+				"max_severity": "",
+				"min_severity": ""
+			}
+		]
+	},
+	"iacMetadata": {
+		"iacType": "terraform",
+		"iacPath": "c:/Users/balamaheshwar.d/Desktop/POC/Devopsautomation/gcp-terraform/modules/compute/main.tf",
+		"providerType": "GCP"
+	}
+}

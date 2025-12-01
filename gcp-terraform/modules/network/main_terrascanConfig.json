@@ -1,0 +1,142 @@
+{
+	"terrascanConfig": {
+		"google_compute_firewall": [
+			{
+				"id": "google_compute_firewall.allow_ssh",
+				"name": "allow_ssh",
+				"module_name": "root",
+				"source": "main.tf",
+				"line": 40,
+				"type": "google_compute_firewall",
+				"config": {
+					"allow": [
+						{
+							"ports": [
+								"22"
+							],
+							"protocol": "tcp"
+						}
+					],
+					"name": "allow-ssh",
+					"network": "${google_compute_network.vpc.self_link}",
+					"source_ranges": [
+						"0.0.0.0/0"
+					]
+				},
+				"skip_rules": null,
+				"max_severity": "",
+				"min_severity": ""
+			},
+			{
+				"id": "google_compute_firewall.allow_http",
+				"name": "allow_http",
+				"module_name": "root",
+				"source": "main.tf",
+				"line": 53,
+				"type": "google_compute_firewall",
+				"config": {
+					"allow": [
+						{
+							"ports": [
+								"80"
+							],
+							"protocol": "tcp"
+						}
+					],
+					"name": "allow-http",
+					"network": "${google_compute_network.vpc.self_link}",
+					"source_ranges": [
+						"0.0.0.0/0"
+					]
+				},
+				"skip_rules": null,
+				"max_severity": "",
+				"min_severity": ""
+			}
+		],
+		"google_compute_network": [
+			{
+				"id": "google_compute_network.vpc",
+				"name": "vpc",
+				"module_name": "root",
+				"source": "main.tf",
+				"line": 1,
+				"type": "google_compute_network",
+				"config": {
+					"auto_create_subnetworks": false,
+					"name": "project-vpc",
+					"project": "${var.project_id}",
+					"routing_mode": "REGIONAL"
+				},
+				"skip_rules": null,
+				"max_severity": "",
+				"min_severity": ""
+			}
+		],
+		"google_compute_subnetwork": [
+			{
+				"id": "google_compute_subnetwork.subnet",
+				"name": "subnet",
+				"module_name": "root",
+				"source": "main.tf",
+				"line": 9,
+				"type": "google_compute_subnetwork",
+				"config": {
+					"ip_cidr_range": "10.0.0.0/24",
+					"log_config": [
+						{
+							"aggregation_interval": "INTERVAL_5_SEC",
+							"flow_sampling": 0.5,
+							"metadata": "INCLUDE_ALL_METADATA"
+						}
+					],
+					"name": "project-subnet",
+					"network": "${google_compute_network.vpc.self_link}",
+					"region": "${var.region}"
+				},
+				"skip_rules": null,
+				"max_severity": "",
+				"min_severity": ""
+			},
+			{
+				"id": "google_compute_subnetwork.subnet_1",
+				"name": "subnet_1",
+				"module_name": "root",
+				"source": "main.tf",
+				"line": 24,
+				"type": "google_compute_subnetwork",
+				"config": {
+					"ip_cidr_range": "10.0.1.0/24",
+					"name": "subnet-1",
+					"network": "${google_compute_network.vpc.self_link}",
+					"region": "${var.region}"
+				},
+				"skip_rules": null,
+				"max_severity": "",
+				"min_severity": ""
+			},
+			{
+				"id": "google_compute_subnetwork.subnet_2",
+				"name": "subnet_2",
+				"module_name": "root",
+				"source": "main.tf",
+				"line": 32,
+				"type": "google_compute_subnetwork",
+				"config": {
+					"ip_cidr_range": "10.0.2.0/24",
+					"name": "subnet-2",
+					"network": "${google_compute_network.vpc.self_link}",
+					"region": "${var.region}"
+				},
+				"skip_rules": null,
+				"max_severity": "",
+				"min_severity": ""
+			}
+		]
+	},
+	"iacMetadata": {
+		"iacType": "terraform",
+		"iacPath": "c:/Users/balamaheshwar.d/Desktop/POC/Devopsautomation/gcp-terraform/modules/network/main.tf",
+		"providerType": "GCP"
+	}
+}

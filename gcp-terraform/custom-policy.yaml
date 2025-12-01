@@ -1,0 +1,10 @@
+# custom-policy.yaml
+
+id: "CUSTOM-TF-01"
+description: "Ensure that EC2 instances do not have public IPs."
+policy_type: "terraform"
+rule: |
+  resource "aws_instance" {
+    public_ip = false
+  }
+
